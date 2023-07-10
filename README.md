@@ -1,1 +1,2 @@
-# SerializationSeminar
+# 유니티 직렬화 세미나
+2023-1 PoolC 유니티 직렬화 세미나
