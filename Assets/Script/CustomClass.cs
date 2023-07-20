@@ -8,7 +8,7 @@ using UnityEngine;
 public class CustomClass
 {
     public int value1;
-    public int value2;
+    public string value2;
 
     public virtual void Method()
     {
@@ -29,4 +29,6 @@ public class CustomDerivedClass : CustomClass
 public class CustomGenericClass<T>
 {
     public T insideValue;
+
+    public int intValue;
 }

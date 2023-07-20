@@ -30,9 +30,13 @@ public class TestScript1 : MonoBehaviour
     public Vector2[] vectorArray;
     public List<bool> boolList;
 
+    public List<int> keys;
+    public List<bool> values;
+    
     public Dictionary<int, bool> table;
 
-    public SerializedDictionary<int, string> newTable;
+    // public SerializedDictionary<int, string> newTable;
+    public NewCustomDictionary<int, string> newTable;
 
     [Flags]
     private enum StateEnum
@@ -46,10 +50,11 @@ public class TestScript1 : MonoBehaviour
     [SerializeField] private StateEnum currentStateEnum;
 
     public List<CustomClass> customClassList  = new List<CustomClass>();
-    
-    public CustomClass customClass;
 
-    public CustomGenericClass<string> customGeneric;
+    public CustomClass customObject;
+
+    public CustomGenericClass<string> customGenericObject1;
+    public CustomGenericClass<int> customGenericObject2;
 
     // Start is called before the first frame update
     void Start()
@@ -57,8 +62,11 @@ public class TestScript1 : MonoBehaviour
         // customClassList.Add(new CustomDerivedClass());
         // customClassList[0].Method();
         newTable[2] = "Bye";
-        
 
+        for (int i = 0; i < 4; i++)
+        {
+            Debug.Log($"{newTable[i]}");
+        }
     }
 
     // Update is called once per frame

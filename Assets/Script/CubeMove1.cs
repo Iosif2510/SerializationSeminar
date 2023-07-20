@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class CubeMove1 : MonoBehaviour
 {
-    [SerializeField] private float rotateSpeed = 100;
+    [SerializeField] private CustomAsset rotSpeedContainer;
 
     private void Update()
     {
-        transform.Rotate(Vector3.up, rotateSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up, rotSpeedContainer.cubeRotateSpeed * Time.deltaTime);
     }
 }
